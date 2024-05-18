@@ -1,8 +1,8 @@
 package com.designpatterns.factorypattern;
 
-public class TransportFactory {
+public interface TransportFactory {
 
-    public static Transport createTransport(String transport) {
+    static Transport createTransport(String transport) {
             switch(transport){
                 case "ship": return new ShipTransport();
                 case "truck": return new TruckTransport();
